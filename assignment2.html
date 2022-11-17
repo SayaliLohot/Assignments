@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Assignment 2</title>
+</head>
+<body>
+    <h1> Forms </h1>
+    <form action="./checkurl.html"><!-- action after submit use action attribute-->
+        <lable for="Name"> Name </lable><!-- For coming name in url we use for attribute-->
+        <input type="text" placeholder="name" name="Name" id="Name"><br><!-- id and for must be same-->
+        <br>
+        <label for="Email"> Email Address </label>
+        <input type="email" placeholder="email" required name="Email" id="Email"><br><br>
+        <lable for="password"> Password </lable>
+        <input type="password" placeholder="password" name="password" id="password"><br><br>
+        <lable for="language"> Language </lable><br><br>
+        <input type="radio" name="Language" value="React">React<br>
+        <input type="radio" name="Language" value="Angular">Angular<br>
+        <input type="radio" name="Language" value="Vue">Vue<br><br>
+        <lable for="cources"> Courses </lable> <br><br>
+        <input type="checkbox" required name="Courses" value="MERN"> MERN <br>
+        <input type="checkbox"name="Courses" value="MEAN"> MEAN <br>
+        <input type="checkbox" name="Courses" value="MEVN"> MEVN <br><br>
+        <label>Field:</label><br>
+      <select name="Field" for="field">
+        <option value="Frontend">Frontend</option>
+        <option value="Backend">Backend</option>
+        <option value="Fullstack">Fullstack</option>
+    </select><br><br>
+        <textarea name="descrpition"></textarea>
+        <br><br>
+     
+        <label for="Ph. Number"> Phone Number </label>
+        <input type="number" name="Phone Number" id="Ph. Number">
+        <button type="submit" placeholder="submit"> Submit </button>
+        <br>
+        <br>
+        <h1> Tables </h1>
+        <a href="./Tables.html"> Click here </a>
+    </form>
+</body>
+</html>
