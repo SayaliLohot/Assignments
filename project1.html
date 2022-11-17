@@ -7,6 +7,7 @@
     <title> Backtracking </title>
 </head>
 <body>
+
     <h2> Backtracking </h2>
     <div>
        <p>
@@ -21,7 +22,7 @@
         </p>
     </div>
     <div> This needs an example.</div>
-    <div> <img src="./images/Image_root.png"> 
+    <div> <img src="./picture/Image_root.png" height="200"> 
     </div>
     <div>
         <ol type="1">
@@ -37,13 +38,16 @@
         </ol>
     </div>
     <div>
+        <fieldset>
        <p> In this example we drew a picture of a tree. The tree is an abstract model of the possible sequences of choices we could make. There is also a data structure called a tree, but usually we don't have a data structure to tell us what choices we have. (If we do have an actual tree data structure, backtracking on it is called depth-first tree searching.)</p>
+    </fieldset>
     </div>
     <hr color="grey" size="1px">
     <div>
         <h4>The backtracking algorithm.</h4>
     </div>
     <div>
+        <fieldset>
         <pre>
             boolean solve(Node n) { 
                 if n is a leaf node { 
@@ -56,11 +60,14 @@
                 }         
             }          
         </pre>
+    </fieldset>
     </div>
     <div>
+        <fieldset>
         <p>
             Notice that the algorithm is expressed as a boolean function. This is essential to understanding the algorithm. If solve(n) is true, that means node n is part of a solution--that is, node n is one of the nodes on a path from the root to some goal node. We say that n is solvable. If solve(n) is false, then there is no path that includes n to any goal node.
         </p>
+    </fieldset>
     </div>
     <div>
         <h5>How does this work?</h5>
@@ -73,15 +80,25 @@
         <p>Hence, to decide whether any non-leaf node n is solvable (part of a path to a goal node), all you have to do is test whether any child of n is solvable. This is done recursively, on each child of n. In the above code, this is done by the lines
         </p>
     </div>
-    <table>
-        <tr> 
-            <table> <tr> <pre>
+    <fieldset>
+         <pre>
                 for each child c of n {
                    if solve(c) succeeds, return true 
                 } 
                 return false
-            </pre></tr></table>
-        </tr>
-    </table>
+            </pre>
+        </fieldset>
+        <br>
+        <br>
+        <p>The backtracking algorithm is simple but important. You should understand it thoroughly. Another way of stating it is as follows:</p>
+        <div>
+            <ul type="dot">
+                <li><b>To search a tree:</b></li>
+            </ul>
+            <ol type="1">
+                <li>If the tree consists of a single leaf, test whether it is a goal node.</li>
+                <li>Otherwise, search the subtrees until you find one containing a goal node, or until you have searched them all unsuccessfully.</li>
+            </ol>
+        </div>
 </body>
 </html>
